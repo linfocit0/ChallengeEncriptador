@@ -1,0 +1,137 @@
+body{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;   
+}
+.grid-container{
+    display: grid;
+    height: 100%;
+    background-color: #E0f6FF;
+    /*border: 1px dashed #1E96FF;*/
+    grid-template-areas: 
+    "input input output"
+    "input input output"
+    "input input output"
+    "input input output"
+    "footer footer footer";
+}
+.grid-item{
+    /*background-color: #E5E5E5;*/
+    border-radius: 10px;
+    color:#000000;
+    text-align: center;
+    padding: 10px;
+    margin: 2px;
+}
+.input{
+    grid-area: input;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+::placeholder{
+    color:blue;
+    font-size: x-large;
+}
+.input textarea{
+    width: 95%;
+    height: 250px;
+    margin: 20px 0;
+    font-size: x-large;
+}
+.disclaimer{
+    text-align: start;
+}
+.losBotones{
+    display: flex;
+    justify-content: center;
+}
+#encriptar{
+    width: 30%;
+    margin: 20px 5px;
+    padding: 15px 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: #D8DFE8;
+    background: #0A3871;
+    border-radius: 10px;
+    border-color: #0A3871;
+}
+#desencriptar{
+    width: 30%;
+    margin: 20px 5px;
+    padding: 15px 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: #0A3871;
+    background: #D8DFE8;
+    border-radius: 10px;
+    border-color: #0A3871;
+}
+.output{
+    grid-area: output;
+    background-color: #E5E5E5;
+}
+.output .hacerDesaparecer{
+    display: flex;/*cambiar  a flex aqui despues*/
+    flex-direction: column;
+    justify-content: space-between;
+}
+.output h1{
+    font-size: 24px;
+    font-weight: bold;
+    margin: 2px 0;
+}
+.output h5{
+    font-weight: bold;
+    margin: 2px 0;
+}
+.campoOculto{
+    display: none;/*poner none aque despues*/
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-around;
+    height: 100%;
+}
+.campoOculto textarea{
+    color: blue;
+}
+.campoOculto button{
+    padding: 15px 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: #0A3871;
+    background: #D8DFE8;
+    border-radius: 10px;
+    border-color: #0A3871;
+}
+.footer{
+    grid-area: footer;
+    background-color: #E5E5E5;
+}
+
+
+@media screen and (max-width:768px) {
+    .grid-container{
+        grid-template-areas: 
+        "input" 
+        "output" 
+        "footer";
+    }
+    #mono{
+        display: none;
+    }
+}
+
+@media screen and (max-width:375px){
+    .losBotones{
+        flex-direction: column;
+        align-items: stretch;
+    }
+    #encriptar, #desencriptar{
+        width: auto; 
+        margin: 5px;     
+    }
+} 
