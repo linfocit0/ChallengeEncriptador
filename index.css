@@ -44,6 +44,12 @@ body{
 .disclaimer{
     text-align: start;
 }
+#textoDisclaimer2{
+    display: none;
+    color: red;
+    font-weight: bolder;
+    font-size: 30px;
+}
 .losBotones{
     display: flex;
     justify-content: center;
